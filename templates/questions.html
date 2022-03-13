@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stories.css">
+    <title>Madlib</title>
+</head>
+<body>
+    <main>
+        <h1>Madlibs</h1>
+        <form action="/story">
+            {% for prompt in prompts %}
+              <p>{{ prompt }}:
+                <input name="{{ prompt }}">
+              </p>
+            {% endfor %}
+            <button>Submit</button>
+          </form>
+        <!-- <form action="/stories" id="form">
+            <label for="place" class="label">Place</label>
+                <input type="text" name="place" id="place" placeholder="place">
+            <br>
+            <label for="noun" class="label">Noun</label>
+                <input type="text" name="noun" id="noun" placeholder="noun">
+            <br>
+            <label for="verb" class="label">Verb</label>
+                <input type="text" name="verb" id="verb" placeholder="verb">
+            <br>
+            <label for="adjective" class="label">Adjective</label>
+                <input type="text" name="adjective" id="adjective" placeholder="adjective">
+            <br>
+            <label for="plural_noun" class="label">Plural Noun</label>
+                <input type="text" name="plural" id="plural" placeholder="plural noun">
+            <br>
+            <button>Submit Madlib</button>
+        </form> -->
+    </main>
+</body>
+</html>
